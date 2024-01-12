@@ -1,9 +1,13 @@
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> <!-- to be able to use JSTL tags -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WorkChat Login</title>
+    <link rel="stylesheet" type="text/css" href="<c:url value="/static/css/reset2.css" />">
+    
     <style>
       
         body {
@@ -165,7 +169,7 @@
     <nav class="navbar">
         <div class="logo-container">
             <a href="#" class="logo">
-                <img class="logo-img" src="css/images-icons/Arola.png" alt="logo">
+                <img class="logo-img" src="<c:url value="/static/images/Arola.png"/>" alt="logo">
                 WorkChat
             </a>
         </div>
@@ -206,7 +210,7 @@
 
             <div class="login-side">
                 
-                <form action="">
+                <form action="processLoginForm">
                     <label for="">Login as</label>
                     <select name="membership-status" id="">
                         <option value="job-seeker">Job Seeker</option>
@@ -217,8 +221,8 @@
                     <input type="text" required="required"/>
                     <label for="password">Password</label>
                     <input type="password" required="required"/>
-                    <input type="button" value="Login" class="login-btn">  
-                    <p>Don't have an account?<a href="showLoginForm">Register</a></p>                  
+                    <button type="submit" class="login-btn">Login</button>  
+                    <p>Don't have an account?<a href="register">Register</a></p>                  
                 </form>
             </div>
 

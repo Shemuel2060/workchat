@@ -1,9 +1,13 @@
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> <!-- to be able to use JSTL tags -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WorkChat Home</title>
+    <link rel="stylesheet" type="text/css" href="<c:url value="/static/css/reset2.css" />">
+    
     <style>
       
         body {
@@ -128,8 +132,8 @@
 
     <nav class="navbar">
         <div class="logo-container">
-            <a href="#" class="logo">
-                <img class="logo-img" src="css/images-icons/Arola.png" alt="logo">
+            <a href="/workchat" class="logo">
+            	<img class="logo-img" src="<c:url value="/static/images/Arola.png"/>" alt="logo">
                 WorkChat
             </a>
         </div>
