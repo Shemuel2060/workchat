@@ -7,6 +7,11 @@ public class Visitors {
 		private String email ="newton@arola.com";
 		private String message ="type message here...";
 		
+		private String password;
+		private String confirmPass;
+		
+		private String userType;
+		
 		
 		// getters and setters
 		public String getName() {
@@ -27,5 +32,27 @@ public class Visitors {
 		public void setMessage(String message) {
 			this.message = message;
 		}
+		public String getPassword() {
+			return password;
+		}
+		public void setPassword(String password) {
+			this.password = password;
+		}
+		public String getConfirmPass() {
+			return confirmPass;
+		}
+		public void setConfirmPass(String confirmPass) {
+			this.confirmPass = confirmPass;
+		}
+		public String getUserType() {
+			return userType;
+		}
+		public void setUserType(String userType) {
+			this.userType = userType;
+		}
+		
+		
+		
+		
 
 }

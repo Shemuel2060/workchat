@@ -68,8 +68,9 @@
                     <label for="password">Password</label>
                     <input type="password" required="required"/>
                     <button type="submit" class="login-btn">Login</button>  
-                    <p>Don't have an account?<a href="register">Register</a></p>                  
+                                    
                 </form>
+                <p class="register-link">Don't have an account?<a href="register"> Register</a></p>  
             </div>
 
         </div>

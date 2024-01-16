@@ -91,5 +91,17 @@
 				</plugin>
 			</plugins>
 		</pluginManagement>
+		
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+			</resource>
+			<!-- Add the following to include React build output -->
+			<resource>
+				<directory>src/main/react-views/build</directory> <!-- Adjust the
+				path based on your actual setup -->
+			</resource>
+		</resources>
+		<!-- Other Maven build configurations -->
 	</build>
 </project>
