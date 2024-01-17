@@ -51,10 +51,13 @@ body {
 }
 
 footer {
+	margin-top: 50px;
+	padding: 20px;
 	text-align: center;
 	padding: 10px;
 	background-color: #00acee;
 	color: white;
+	height: 100px;
 }
 
 .main-page-container {
@@ -65,20 +68,20 @@ footer {
 	width: 80%;
 }
 
-h1 {
+h3, h1 {
 	color: #BFFCF9;
 }
 
 .welcome-text {
-	box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-	margin-right: 80px;
-	margin-bottom: 20px;
-	margin-top: 20px;
-	text-align: center;
-	display: flex;
-	flex-direction: column;
+	padding: 20px;
+	border-radius: 15px;
+	margin: auto;
+	margin-right:20px;
+	width: 30%;
+	align-items: center;
 	justify-content: center;
-	/* align-items: center; */
+	background: #919eab;
+	border: 1px solid #00acee;
 }
 
 .welcome-text h1 {
@@ -118,20 +121,19 @@ h1 {
 	color: #fff;
 }
 
-button {
-	background-color: #00acee;
-	padding: 10px 30px;
-	font-size: 20px;
-	color: #fff;
-	border: 2px solid #00acee;
-	border-radius: 25px;
-	margin-bottom: 50px;
-	transition: background-color 0.3s ease;
-	/* Smooth transition on hover */
+button{
+	width: 100px; 
+	margin-bottom:50px;
+    font-size: 20px;
+    background-color: #00acee;
+    color: white;
+    padding: 10px;
+    padding-left: 10px;
+    border: 1px solid #00acee;
+    border-radius: 20px;
+    cursor: pointer;
 }
 
 button:hover {
-	cursor: pointer;
 	background-color: #007bb5;
-	/* Darker color on hover */
 }

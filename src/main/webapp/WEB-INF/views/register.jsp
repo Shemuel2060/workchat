@@ -7,19 +7,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Document</title>
-<link rel="stylesheet" type="text/css"
-	href="<c:url value="/static/css/reset2.css" />">
+<title>Workchat | register</title>
+<%-- <link rel="stylesheet" type="text/css"
+	href="<c:url value="/static/css/reset2.css" />"> --%>
 <link rel="stylesheet" type="text/css"
 	href="<c:url value="/static/css/registry.css" />">
 
 
-<script defer>
-	/* script to populate a form depending on whether
-	a user has selected job-seeker, freelancer or employer */
-	let userType = document.querySelector("option");
-	console.log(userType);
-</script>
 </head>
 <body>
 
@@ -48,35 +42,32 @@
 			</div>
 			<div class="form">
 				<form:form action="processRegistration" modelAttribute="user">
-					<form:label path="name">Name</form:label> 
-					<form:input path="name" required="required" /> 
-					<form:label path="email">Email</form:label> 
-					<form:input path="email" required="required" /> 
-					<form:label path="password">Password</form:label> 
-					<form:input path="password" required="required" /> 
-					<form:label path="confirmPass">Confirm Password</form:label> 
+					<form:label path="name">Name</form:label>
+					<form:input path="name" required="required" />
+					<form:label path="email">Email</form:label>
+					<form:input path="email" required="required" />
+					<form:label path="password">Password</form:label>
+					<form:input path="password" required="required" />
+					<form:label path="confirmPass">Confirm Password</form:label>
 					<form:input path="confirmPass" required="required" />
 
-					<div>
-						<form:label path="userType">Choose category</form:label> 
-						<form:select path="userType">
-							<form:option value="jobseeker" class="userCategory">Job Seeker</form:option>
-							<form:option value="freelancer" class="userCategory">Freelancer</form:option>
-							<form:option value="employer" class="userCategory">Employer</form:option>
-						</form:select>
-					</div>
+
+					<form:label path="userType">Choose category</form:label>
+					<form:select path="userType">
+						<form:option value="jobseeker" class="userCategory">Job Seeker</form:option>
+						<form:option value="freelancer" class="userCategory">Freelancer</form:option>
+						<form:option value="employer" class="userCategory">Employer</form:option>
+					</form:select>
+
+					<button type="submit" class="register-btn">Submit</button>
+
 				</form:form>
-				
+
 			</div>
-			
+
 			<!-- to contain form for extra details: if job seeker or employer -->
-			<div class="userType-more-details">
-				
-					<p>Hello</p>
-					
-					
-			</div>
-			
+			<div class="userType-more-details"></div>
+
 
 		</div>
 
