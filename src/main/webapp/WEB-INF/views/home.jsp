@@ -21,7 +21,7 @@
             </a>
         </div>
         <div class="nav-links">
-            <a href="/workchat">WorkChat Web</a>
+            <a href="/workchat">ChatRoom</a>
             <a href="/workchat">Features</a>
             <a href="/workchat">Help Center</a>
             <!-- Add more links as needed -->
