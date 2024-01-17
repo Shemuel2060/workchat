@@ -10,6 +10,30 @@
     <%-- <link rel="stylesheet" type="text/css" href="<c:url value="/static/css/reset2.css" />"> --%>
     <link rel="stylesheet" type="text/css" href="<c:url value="/static/css/login.css" />">
     
+    <script type="text/javascript">
+    
+    	function validateLogin(){
+    		// get input field values
+    		userName = document.getElementById("userName").value;
+    		pass = document.getElementById("pass").value;
+    		
+    		
+    		if(userName.length < 1 || userName.trim()===""){
+    			alert("Please enter your user name!")
+    			
+    			return false;
+    		}else if(pass.length<1 || pass.trim()===""){
+    			alert("Please enter your password!")
+    			return false;
+    		}else{
+    			
+    			return true;
+    		}
+    	}
+    
+    
+    </script>
+    
 </head>
 <body>
 
@@ -21,7 +45,7 @@
             </a>
         </div>
         <div class="nav-links">
-            <a href="/workchat">WorkChat Web</a>
+            <a href="/workchat">ChatRoom</a>
             <a href="/workchat">Features</a>
             <a href="/workchat">Help Center</a>
             <!-- Add more links as needed -->
@@ -57,7 +81,7 @@
 
             <div class="login-side">
                 
-                <form:form action="processLoginForm" modelAttribute="user">
+                <form:form action="processLoginForm" modelAttribute="user" onSubmit="return validateLogin()">
                     <form:label path="userType">Login as</form:label>
                     <form:select path="userType" name="membership-status">
                         <option value="job-seeker">Job Seeker</option>
@@ -65,9 +89,9 @@
                         <option value="freelancer">Freelancer</option>
                     </form:select>
                     <form:label path="name">User Name</form:label>
-                    <form:input path="name" required="required"/>
+                    <form:input path="name" id="userName"/>
                     <form:label path="password">Password</form:label>
-                    <form:input path="password" required="required"/>
+                    <form:input path="password" id="pass"/>
                     <button type="submit" class="login-btn">Login</button>  
                                     
                 </form:form>
