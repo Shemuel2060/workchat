@@ -50,15 +50,15 @@ body {
 	display: flex;
 	/* justify-content: space-around; */
 	padding-left: 50px;
-	padding-right: 200px;
+	padding-right: 50px;
 	margin-top: 50px;
 	margin-bottom: 80px;
 	align-items: center;
 }
 
-form,
-header {
+form {
 	padding: 20px;
+	padding-top:10px;
 	border-radius: 15px;
 	width: 60%;
 	margin: auto;
@@ -67,21 +67,33 @@ header {
 	height: 100%;
 }
 
-header {
-	font-size: 50px;
-}
-
 .reg-header {
+	padding: 20px;
+	border-radius: 15px;
+	margin: auto;
+	margin-right:20px;
 	width: 30%;
 	align-items: center;
 	justify-content: center;
+	background: #919eab;
+	border: 1px solid #00acee;
 
+}
+
+header {
+
+	font-size: 50px;
+	
+	
 }
 
 .reg-header p {
 	width: 100%;
-	padding-left: 50px;
+	padding-left: 10px;
 }
+
+/* =========================================================*/
+
 
 label {
 	color: white;
@@ -89,9 +101,7 @@ label {
 }
 
 select,
-input[type="text"],
-input[type='email'],
-input[type="password"] {
+input {
 	padding: 10px;
 	margin-bottom: 10px;
 	margin-bottom: 15px;
@@ -109,9 +119,34 @@ input {
 	margin-right: 200px;
 }
 
-.userType-more-details {
-	/* JS generated elements when user selects certain type*/
 
+button.register-btn{
+	width: 200px; 
+    font-size: 20px;
+    background-color: #00acee;
+    color: white;
+    padding: 10px;
+    padding-left: 10px;
+    border: 1px solid #00acee;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+button.register-btn:hover {
+	background-color: #007bb5;
+}
+
+.check-terms-label, .check-terms {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.check-terms{
+	width:20px;
+	height:20px;
+}
+.check-terms-label{
+	width:300px;
 }
 
 footer {
