@@ -142,7 +142,7 @@ input {
 
 a {
 	text-decoration: none;
-	display: inline;
+	display: block;
 	color: #00c9c8;
 }
 
@@ -150,7 +150,12 @@ a:hover {
 	transition: font-size 0.3s ease;
 	/* Smooth transition on hover */
 	font-size: 25px;
+	margin-left: 10px;
 
+}
+
+.register-link{
+	margin-left: 90px;
 }
 
 .login-btn {
