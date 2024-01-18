@@ -78,7 +78,7 @@
 			</div>
 			<div class="form">
 				<form:form action="processRegistration" modelAttribute="user"
-					>
+					onSubmit="return validateRegistration()">
 					<form:label path="name">Name</form:label>
 					<form:input path="name" id="userName" />
 					<form:errors path="name" class="error" />
