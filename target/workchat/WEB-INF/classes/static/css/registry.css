@@ -136,6 +136,19 @@ button.register-btn:hover {
 	background-color: #007bb5;
 }
 
+.check-terms-label, .check-terms {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.check-terms{
+	width:20px;
+	height:20px;
+}
+.check-terms-label{
+	width:300px;
+}
+
 footer {
 	margin-top: 50px;
 	padding: 20px;

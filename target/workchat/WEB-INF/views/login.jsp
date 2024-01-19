@@ -10,6 +10,15 @@
     <%-- <link rel="stylesheet" type="text/css" href="<c:url value="/static/css/reset2.css" />"> --%>
     <link rel="stylesheet" type="text/css" href="<c:url value="/static/css/login.css" />">
     
+    <style type="text/css">
+    	.error{
+    		color:red;
+    		font-style:italic;
+    		width: 300px;
+    		margin-bottom:10px;
+    	}
+    </style>
+    
     <script type="text/javascript">
     
     	function validateLogin(){
@@ -18,12 +27,12 @@
     		pass = document.getElementById("pass").value;
     		
     		
-    		if(userName.length < 1 || userName.trim()===""){
-    			alert("Please enter your user name!")
+    		if(userName.length < 3 || userName.trim()===""){
+    			alert("Name should be 3-25 characters!")
     			
     			return false;
-    		}else if(pass.length<1 || pass.trim()===""){
-    			alert("Please enter your password!")
+    		}else if(pass.length<8 || pass.trim()===""){
+    			alert("Password should be 8-50 characters!")
     			return false;
     		}else{
     			
@@ -39,7 +48,7 @@
 
     <nav class="navbar">
         <div class="logo-container">
-            <a href="#" class="logo">
+            <a href="/workchat" class="logo">
                 <img class="logo-img" src="<c:url value="/static/images/Arola.png"/>" alt="logo">
                 WorkChat
             </a>
@@ -81,7 +90,7 @@
 
             <div class="login-side">
                 
-                <form:form action="processLoginForm" modelAttribute="user">
+                <form:form action="processLoginForm" modelAttribute="user" onSubmit="return validateLogin()">
                     <form:label path="userType">Login as</form:label>
                     <form:select path="userType" name="membership-status">
                         <option value="job-seeker">Job Seeker</option>
@@ -90,8 +99,10 @@
                     </form:select>
                     <form:label path="name">User Name</form:label>
                     <form:input path="name" id="userName"/>
+                    <form:errors path="name" class="error"/>
                     <form:label path="password">Password</form:label>
                     <form:input path="password" id="pass"/>
+                    <form:errors path="password" class="error"/>
                     <button type="submit" class="login-btn">Login</button>  
                                     
                 </form:form>

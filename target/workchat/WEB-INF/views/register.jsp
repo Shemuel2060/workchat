@@ -13,6 +13,15 @@
 <link rel="stylesheet" type="text/css"
 	href="<c:url value="/static/css/registry.css" />">
 
+<style type="text/css">
+.error {
+	color: red;
+	font-style: italic;
+	width: 300px;
+	margin-bottom: 10px;
+}
+</style>
+
 <script type="text/javascript">
 	function validateRegistration() {
 		// get input field values
@@ -52,8 +61,8 @@
 			</a>
 		</div>
 		<div class="nav-links">
-			<a href="/workchat">ChatRoom</a> <a href="#">Features</a> <a
-				href="#">Help Center</a>
+			<a href="/workchat">ChatRoom</a> <a href="#">Features</a> <a href="#">Help
+				Center</a>
 			<!-- Add more links as needed -->
 		</div>
 	</nav>
@@ -68,15 +77,20 @@
 				<p>Choose category for further details. Thanks!</p>
 			</div>
 			<div class="form">
-				<form:form action="processRegistration" modelAttribute="user" onSubmit="return validateRegistration()">
+				<form:form action="processRegistration" modelAttribute="user"
+					onSubmit="return validateRegistration()">
 					<form:label path="name">Name</form:label>
-					<form:input path="name" id="userName"  />
+					<form:input path="name" id="userName" />
+					<form:errors path="name" class="error" />
 					<form:label path="email">Email</form:label>
-					<form:input path="email" id="userEmail"/>
+					<form:input path="email" id="userEmail" />
+					<form:errors path="email" class="error" />
 					<form:label path="password">Password</form:label>
 					<form:input path="password" id="userPassword" />
+					<form:errors path="password" class="error" />
 					<form:label path="confirmPass">Confirm Password</form:label>
 					<form:input path="confirmPass" id="userConfirmPassword" />
+					<form:errors path="confirmPass" class="error" />
 
 
 					<form:label path="userType">Choose category</form:label>
@@ -86,6 +100,13 @@
 						<form:option value="employer" class="userCategory">Employer</form:option>
 					</form:select>
 
+					<form:label path="termsAndconditions" for="terms-conditions"
+						class="check-terms-label">
+					I agree to the terms and conditions
+					</form:label>
+					<form:checkbox path="termsAndconditions" class="check-terms"
+						id="terms-conditions" />
+					<form:errors path="termsAndconditions" class="error" />
 					<button type="submit" class="register-btn">Submit</button>
 
 				</form:form>
