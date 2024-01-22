@@ -12,12 +12,15 @@
 </style>
 </head>
 <body>
-	<h1>Hi, ${user.name}</h1>
+	<h1>Hi, ${user.userData.name}</h1>
 	<p>
 		Thanks for contacting <span>WorkChat</span>.
 	</p>
 	<p>
-		A verification code is sent to <i>${user.email}</i>.
+		A verification code is sent to <i>${user.userData.email}</i>.
+	</p>
+	<p>
+		Phone Number: <i>${user.userData.phone}</i>.
 	</p>
 	<p>You chose the following category:</p>
 	<blockquote>${user.userType}</blockquote>

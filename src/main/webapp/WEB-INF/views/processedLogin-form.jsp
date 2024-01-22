@@ -50,7 +50,7 @@
     </style>
 </head>
 <body>
-    <h1>Hi, ${user.name}</h1>  
+    <h1>Hi, ${user.userData.name}</h1>  
     <p>Welcome back to <span>WorkChat</span>.</p> 
     <p>Go back to <a href="/workchat">WorkChat</a></p>
    
