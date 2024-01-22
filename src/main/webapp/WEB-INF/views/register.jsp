@@ -40,8 +40,8 @@
 		}else if (pass.length < 1 || pass.trim() === "") {
 			alert("Please enter your password!")
 			return false;
-		}else if (confirmPass.length < 1 || confirmPass.trim() === "" || confirmPass !==pass) {
-			alert("Please confirm your password!")
+		}else if (userPhoneNumber.length < 1 || userPhoneNumber.trim() === "") {
+			alert("Please enter your phone number!")
 			return false;
 		} else {
 			return true;
@@ -79,18 +79,18 @@
 			<div class="form">
 				<form:form action="processRegistration" modelAttribute="user"
 					onSubmit="return validateRegistration()">
-					<form:label path="name">Name</form:label>
-					<form:input path="name" id="userName" />
-					<form:errors path="name" class="error" />
-					<form:label path="email">Email</form:label>
-					<form:input path="email" id="userEmail" />
-					<form:errors path="email" class="error" />
+					<form:label path="userData.name">Name</form:label>
+					<form:input path="userData.name" id="userName" />
+					<form:errors path="userData.name" class="error" />
+					<form:label path="userData.email">Email</form:label>
+					<form:input path="userData.email" id="userEmail" />
+					<form:errors path="userData.email" class="error" />
 					<form:label path="password">Password</form:label>
 					<form:input path="password" id="userPassword" />
 					<form:errors path="password" class="error" />
-					<form:label path="confirmPass">Confirm Password</form:label>
-					<form:input path="confirmPass" id="userConfirmPassword" />
-					<form:errors path="confirmPass" class="error" />
+					<form:label path="userData.phone">Phone Number</form:label>
+					<form:input path="userData.phone" id="userPhoneNumber" />
+					<form:errors path="userData.phone" class="error" />
 
 
 					<form:label path="userType">Choose category</form:label>

@@ -97,12 +97,12 @@
                         <option value="employer">Employer</option>
                         <option value="freelancer">Freelancer</option>
                     </form:select>
-                    <form:label path="name">User Name</form:label>
-                    <form:input path="name" id="userName"/>
-                    <form:errors path="name" class="error"/>
-                    <form:label path="password">Password</form:label>
-                    <form:input path="password" id="pass"/>
-                    <form:errors path="password" class="error"/>
+                    <form:label path="userData.name">Name</form:label>
+                    <form:input path="userData.name" id="userName"/>
+                    <form:errors path="userData.name" class="error"/>
+                    <form:label path="registrationData.password">Password</form:label>
+                    <form:input path="registrationData.password" id="pass"/>
+                    <form:errors path="registrationData.password" class="error"/>
                     <button type="submit" class="login-btn">Login</button>  
                                     
                 </form:form>

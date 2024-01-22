@@ -5,34 +5,34 @@ import javax.validation.constraints.Size;
 
 public class LoginData {
 	
-	@NotNull(message="User name cannot be empty")
-	@Size(min=3, max=25, message="Name should be 3-25 characters")
-	private String name;
+
+	@NotNull(message="Name cannot be empty")
+	private UserData userData; // access user name
 	
+	@NotNull(message="Password cannot be empty")
+	private RegistrationData registrationData; // access password
 	
-	@NotNull(message="User name cannot be empty")
-	@Size(min=3, max=25, message="Name should be 3-25 characters")
-	private String password;
-	
-	@NotNull(message="User name cannot be empty")
+	@NotNull(message="Category cannot be empty")
 	@Size(min=3, max=25, message="Name should be 3-25 characters")
 	private String userType;
 
+
+
+	public UserData getUserData() {
+		return userData;
+	}
+
+	public void setUserData(UserData userData) {
+		this.userData = userData;
+	}
 	
-	public String getName() {
-		return name;
+	
+	public RegistrationData getRegistrationData() {
+		return registrationData;
 	}
 
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
+	public void setRegistrationData(RegistrationData registrationData) {
+		this.registrationData = registrationData;
 	}
 
 	public String getUserType() {
