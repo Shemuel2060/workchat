@@ -18,8 +18,8 @@ public class UserData {
 	@Size(min=3, max=100, message="Email should be 3-100 characters")
 	private String email;
 	
-	@NotNull(message="Email cannot be empty")
-	@Size(min=3, max=100, message="Email should be 3-100 characters")
+	@NotNull(message="Phone cannot be empty")
+	@Size(min=3, max=100, message="Phone should be 3-100 characters")
 	private Phone phone;
 
 	
