@@ -28,7 +28,6 @@
 		userName = document.getElementById("userName").value;
 		userEmail = document.getElementById("userEmail").value;
 		pass = document.getElementById("userPassword").value;
-		confirmPass = document.getElementById("userConfirmPassword").value;
 		
 
 		if (userName.length < 1 || userName.trim() === "") {
